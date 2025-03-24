@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Plant</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Add New Plant</h1>
+    </header>
+    <nav>
+        <a href="/plants">Back to All Plants</a>
+    </nav>
+    <form action="/plants" method="POST">
+        <label for="name">Plant Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+        <label for="image">Image URL:</label>
+        <input type="text" id="image" name="image">
+        <button type="submit">Add Plant</button>
+    </form>
+</div>
+</body>
+</html>

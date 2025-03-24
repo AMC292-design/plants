@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= plant.name %> Details</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1><%= plant.name %></h1>
+    </header>
+    <nav>
+        <a href="/plants">Back to All Plants</a>
+        <a href="/plants/<%= plant._id %>/edit">Edit</a>
+        <form action="/plants/<%= plant._id %>?_method=DELETE" method="POST" style="display:inline;">
+            <button type="submit">Delete</button>
+        </form>
+    </nav>
+    <div class="plant-details">
+        <p><strong>Description:</strong> <%= plant.description %></p>
+        <% if (plant.image) { %>
+            <img src="<%= plant.image %>" alt="<%= plant.name %> Image">
+        <% } %>
+    </div>
+</div>
+</body>
+</html>
